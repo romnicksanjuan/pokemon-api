@@ -3,9 +3,9 @@ import './App.css'
 
 function App() {
 
-  const myFunction = async ({avatar}) => {
+  const myFunction = async () => {
     try {
-      const name = document.getElementById('name').value;
+      const name = document.getElementById('name').value.toLowerCase();
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
       const data = await response.json();
       console.log(data)
